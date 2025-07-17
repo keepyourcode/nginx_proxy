@@ -23,3 +23,6 @@ export https_proxy=http://your_host_ip:8888
 curl -v http://www.google.com
 
 ```
+
+todo 访问来源ip做控制呢？
+ip+端口模式的代理呢？
