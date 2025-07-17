@@ -9,9 +9,7 @@ docker build -t nginx_proxy .
 ```
 run
 ```
-docker run -d -p 8888:8888 \
--v ${PWD}/nginx_allowlist.conf:/usr/local/nginx/conf/nginx.conf \
-nginx_proxy
+docker compose up -d --build
 ```
 use proxy
 ```
