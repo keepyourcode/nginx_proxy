@@ -1,13 +1,15 @@
 version: "3.7"
 services:
   nginx_proxy:
-    image: nginx_proxy:latest
+    #image: nginx_proxy:latest
     build:
       context: .
       dockerfile: Dockerfile
     container_name: nginx_proxy
     volumes:
       - ./nginx_allowlist.conf:/usr/local/nginx/conf/nginx.conf
+    ports:
+      - "8888:8888"
     environment:
-      - TZ=Etc/UTC
+      - TZ=Asia/Shanghai
     restart: always
